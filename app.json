@@ -1,0 +1,23 @@
+{
+  "expo": {
+    "name": "Navigation App SDK 57",
+    "slug": "navigation-app-clases-12-20-sdk57",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "scheme": "navigationapp",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "plugins": [
+      "expo-router"
+    ],
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#ffffff"
+      },
+      "edgeToEdgeEnabled": true
+    },
+    "experiments": {
+      "typedRoutes": false
+    }
+  }
+}
