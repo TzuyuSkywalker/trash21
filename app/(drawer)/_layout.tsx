@@ -3,50 +3,60 @@ import { Ionicons } from '@expo/vector-icons';
 import { Drawer } from 'expo-router/drawer';
 import React from 'react';
 
+const PURPLE = '#4A0E8F';
+
 const DrawerLayout = () => {
   return (
     <Drawer
       drawerContent={(props) => <CustomDrawer {...props} />}
       screenOptions={{
         overlayColor: 'rgba(0,0,0,0.4)',
-        drawerActiveTintColor: 'indigo',
-        sceneStyle: {
-          backgroundColor: 'bisque',
-        },
+        drawerActiveTintColor: PURPLE,
+        drawerActiveBackgroundColor: '#E8DFF0',
+        sceneStyle: { backgroundColor: '#DDA0DD' },
         headerShadowVisible: false,
+        headerStyle: { backgroundColor: 'white' },
       }}
     >
+      <Drawer.Screen
+        name="home/index"
+        options={{
+          drawerLabel: 'Inicio',
+          title: 'Inicio',
+          drawerIcon: ({ color, size }) => <Ionicons name="home-outline" size={size} color={color} />,
+        }}
+      />
       <Drawer.Screen
         name="(tabs)"
         options={{
           headerShown: false,
-          drawerLabel: 'Tabs + Stack',
-          title: 'Tabs + Stack',
-          drawerIcon: ({ color, size }) => (
-            <Ionicons name="albums-outline" size={size} color={color} />
-          ),
+          drawerLabel: 'Productos',
+          title: 'Productos',
+          drawerIcon: ({ color, size }) => <Ionicons name="bag-check-outline" size={size} color={color} />,
         }}
       />
-
+      <Drawer.Screen
+        name="branches/index"
+        options={{
+          drawerLabel: 'Sucursales',
+          title: 'Sucursales',
+          drawerIcon: ({ color, size }) => <Ionicons name="storefront-outline" size={size} color={color} />,
+        }}
+      />
       <Drawer.Screen
         name="user/index"
         options={{
-          drawerLabel: 'User',
+          drawerLabel: 'Usuario',
           title: 'Usuario',
-          drawerIcon: ({ color, size }) => (
-            <Ionicons name="person-circle-outline" size={size} color={color} />
-          ),
+          drawerIcon: ({ color, size }) => <Ionicons name="person-circle-outline" size={size} color={color} />,
         }}
       />
-
       <Drawer.Screen
-        name="schedule/index"
+        name="about/index"
         options={{
-          drawerLabel: 'Horario',
-          title: 'Horario',
-          drawerIcon: ({ color, size }) => (
-            <Ionicons name="calendar-outline" size={size} color={color} />
-          ),
+          drawerLabel: 'Acerca de ...',
+          title: 'Acerca de ...',
+          drawerIcon: ({ color, size }) => <Ionicons name="information-circle-outline" size={size} color={color} />,
         }}
       />
     </Drawer>

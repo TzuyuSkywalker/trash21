@@ -2,46 +2,39 @@ import { Ionicons } from '@expo/vector-icons';
 import { Tabs } from 'expo-router';
 import React from 'react';
 
+const PURPLE = '#4A0E8F';
+const LILAC = '#DDA0DD';
+
 const TabsLayout = () => {
   return (
     <Tabs
       screenOptions={{
-        tabBarActiveTintColor: 'white',
-        tabBarInactiveTintColor: 'white',
-        tabBarStyle: {
-          backgroundColor: 'black',
-        },
-        tabBarActiveBackgroundColor: 'red',
         headerShown: false,
+        tabBarActiveTintColor: PURPLE,
+        tabBarInactiveTintColor: 'white',
+        tabBarActiveBackgroundColor: LILAC,
+        tabBarStyle: { backgroundColor: PURPLE },
       }}
     >
       <Tabs.Screen
-        name="(stack)"
+        name="products"
         options={{
-          title: 'Stack',
-          tabBarIcon: ({ color }) => (
-            <Ionicons size={22} name="person-add-outline" color={color} />
-          ),
+          title: 'Productos',
+          tabBarIcon: ({ color }) => <Ionicons size={22} name="cart-outline" color={color} />,
         }}
       />
-
       <Tabs.Screen
-        name="home/index"
+        name="phones"
         options={{
-          title: 'Inicio',
-          tabBarIcon: ({ color }) => (
-            <Ionicons size={22} name="home-outline" color={color} />
-          ),
+          title: 'Celulares',
+          tabBarIcon: ({ color }) => <Ionicons size={22} name="phone-portrait-outline" color={color} />,
         }}
       />
-
       <Tabs.Screen
-        name="favorites/index"
+        name="tvs"
         options={{
-          title: 'Favoritos',
-          tabBarIcon: ({ color }) => (
-            <Ionicons size={22} name="star-outline" color={color} />
-          ),
+          title: 'Televisores',
+          tabBarIcon: ({ color }) => <Ionicons size={22} name="tv-outline" color={color} />,
         }}
       />
     </Tabs>
