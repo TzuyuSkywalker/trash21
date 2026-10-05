@@ -1,15 +1,34 @@
-import { Ionicons } from '@expo/vector-icons';
-import React from 'react';
-import { Linking, Pressable, ScrollView, Text, View } from 'react-native';
+import { Ionicons } from "@expo/vector-icons";
+import React from "react";
+import { Linking, Pressable, ScrollView, Text, View } from "react-native";
 
-const PURPLE = '#4A0E8F';
+const PURPLE = "#4A0E8F";
 
-// TODO: reemplazá por las sucursales reales de la empresa
 const sucursales = [
-  { nombre: 'Casa Central - Ituzaingó', direccion: 'Av. Rivadavia 1234, Ituzaingó', horario: 'Lun a Sáb 9:00 a 20:00', telefono: '+541144440001' },
-  { nombre: 'Sucursal Morón', direccion: 'Av. Rivadavia 5678, Morón', horario: 'Lun a Sáb 9:00 a 20:00', telefono: '+541144440002' },
-  { nombre: 'Sucursal Castelar', direccion: 'Av. Santa Rosa 910, Castelar', horario: 'Lun a Sáb 9:30 a 19:30', telefono: '+541144440003' },
-  { nombre: 'Sucursal Merlo', direccion: 'Av. del Libertador 1500, Merlo', horario: 'Lun a Sáb 9:00 a 19:00', telefono: '+541144440004' },
+  {
+    nombre: "Casa Central - Ituzaingó",
+    direccion: "Av. Rivadavia 1234, Ituzaingó",
+    horario: "Lun a Sáb 9:00 a 20:00",
+    telefono: "+541144440001",
+  },
+  {
+    nombre: "Sucursal Morón",
+    direccion: "Av. Rivadavia 5678, Morón",
+    horario: "Lun a Sáb 9:00 a 20:00",
+    telefono: "+541144440002",
+  },
+  {
+    nombre: "Sucursal Castelar",
+    direccion: "Av. Santa Rosa 910, Castelar",
+    horario: "Lun a Sáb 9:30 a 19:30",
+    telefono: "+541144440003",
+  },
+  {
+    nombre: "Sucursal Merlo",
+    direccion: "Av. del Libertador 1500, Merlo",
+    horario: "Lun a Sáb 9:00 a 19:00",
+    telefono: "+541144440004",
+  },
 ];
 
 const BranchesScreen = () => {

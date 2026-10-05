@@ -1,6 +1,6 @@
-import ProductList from '@/components/shared/ProductList';
-import { products } from '@/store/products.store';
+import ProductList from "@/components/shared/ProductList";
+import { catalogoProductos } from "@/store/catalogo";
 
 export default function Screen() {
-  return <ProductList data={products} basePath="products" />;
+  return <ProductList data={catalogoProductos} basePath="products" />;
 }

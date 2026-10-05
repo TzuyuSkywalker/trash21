@@ -1,6 +1,6 @@
 import ProductDetail from '@/components/shared/ProductDetail';
-import { tvs } from '@/store/tvs.store';
+import { catalogoTelevisores } from '@/store/catalogo';
 
 export default function Screen() {
-  return <ProductDetail data={tvs} />;
+  return <ProductDetail data={catalogoTelevisores} />;
 }
